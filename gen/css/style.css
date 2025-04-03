@@ -1,0 +1,43 @@
+body {
+  background-color: #08d431;
+  display: grid;
+  grid-template-rows: 2fr auto;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-areas: "header header header" "X     elva   tolv";
+  margin: 0;
+}
+
+header {
+  background-color: #0a5c0a;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "logo rubrik header";
+}
+
+img {
+  width: 300px;
+}
+
+.logo {
+  grid-area: logo;
+  width: 100px;
+}
+
+.rubrik {
+  grid-area: rubrik;
+  justify-self: center;
+  align-self: center;
+}
+
+.PearX {
+  grid-area: X;
+}
+
+.Pear11 {
+  grid-area: elva;
+}
+
+.Pear12 {
+  grid-area: tolv;
+}/*# sourceMappingURL=style.css.map */
