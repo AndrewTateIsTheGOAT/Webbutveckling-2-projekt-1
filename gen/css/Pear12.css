@@ -1,0 +1,48 @@
+:root {
+  --color-Header-bg: rgb(116, 116, 170);
+  --color-Main-bg: grey;
+}
+
+body {
+  background-color: var(--color-Main-bg);
+  display: grid;
+  grid-template-rows: 2fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header header header" "Vara   Vara   Vara";
+  margin: 0;
+  gap: 0.3rem;
+}
+
+header {
+  z-index: 1000;
+  background-color: var(--color-Header-bg);
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "logo rubrik header1";
+  border-bottom: black 0.6rem ridge;
+}
+
+.logo {
+  grid-area: logo;
+  width: 100px;
+}
+
+.rubrik {
+  grid-area: rubrik;
+  justify-self: center;
+  align-self: center;
+}
+
+main {
+  grid-area: Vara;
+  grid-template-columns: 1fr;
+  grid-template-areas: telefon;
+}
+
+#H {
+  grid-area: telefon;
+  justify-self: center;
+  align-self: center;
+  padding-top: 15rem;
+}/*# sourceMappingURL=Pear12.css.map */

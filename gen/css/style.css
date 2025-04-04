@@ -1,22 +1,46 @@
+:root {
+  --color-Header-bg: rgb(116, 116, 170);
+  --color-Main-bg: grey;
+}
+
 body {
-  background-color: #08d431;
+  background-color: var(--color-Main-bg);
   display: grid;
   grid-template-rows: 2fr auto;
-  grid-template-columns: 2fr 2fr 2fr;
-  grid-template-areas: "header header header" "X     elva   tolv";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header header header" "Vara   Vara   Vara";
   margin: 0;
+  gap: 0.3rem;
 }
 
 header {
-  background-color: #0a5c0a;
+  z-index: 1000;
+  background-color: var(--color-Header-bg);
   grid-area: header;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "logo rubrik header";
+  grid-template-areas: "logo rubrik header1";
+  border-bottom: black 0.6rem ridge;
+}
+
+main {
+  grid-area: Vara;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "PearX Pear11 Pear12";
+  justify-items: center;
+  align-items: center;
 }
 
 img {
   width: 300px;
+}
+
+.varaBild {
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6%;
 }
 
 .logo {
@@ -30,14 +54,67 @@ img {
   align-self: center;
 }
 
-.PearX {
-  grid-area: X;
+#PearX {
+  grid-area: PearX;
 }
 
-.Pear11 {
-  grid-area: elva;
+#Pear11 {
+  grid-area: Pear11;
 }
 
-.Pear12 {
-  grid-area: tolv;
+#Pear12 {
+  grid-area: Pear12;
+}
+
+#LinkPearX {
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas: "header" "Vara" "Vara" "Vara";
+  }
+  header {
+    z-index: 1000;
+    background-color: var(--color-Header-bg);
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas: "logo rubrik";
+  }
+  main {
+    grid-area: Vara;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-areas: "PearX" "Pear11" "Pear12";
+  }
+  #PearX {
+    grid-area: PearX;
+    border-bottom: black 0.6rem ridge;
+    border-right: none;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "PearXBild" "PearXNamn" "PearXPris";
+  }
+  #PearXN {
+    grid-area: PearXNamn;
+  }
+  #PearXB {
+    grid-area: PearXBild;
+  }
+  #Pear11 {
+    grid-area: Pear11;
+    border-right: none;
+    border-bottom: black 0.6rem ridge;
+  }
+  #Pear12 {
+    grid-area: Pear12;
+    border-bottom: none;
+    border-left: none;
+  }
 }/*# sourceMappingURL=style.css.map */
